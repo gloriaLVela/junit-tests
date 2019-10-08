@@ -4,6 +4,7 @@ public class Student {
      * id should be a long number used to represent a "unique user" in our application.
      * name is a String that holds the name of the student.
      * grades is an ArrayList that contains a list of Integer numbers.
+     *
      */
 
     private long id;
@@ -12,6 +13,7 @@ public class Student {
 
 
     Student(long id, String name, int[] grades){
+
         this.id = id;
         this.name = name;
         this.grades = grades;
