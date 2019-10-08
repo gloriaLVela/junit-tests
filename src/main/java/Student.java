@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Student {
 
     /**
@@ -9,14 +11,14 @@ public class Student {
 
     private long id;
     private String name;
-    private int[] grades;
+    private ArrayList <Integer> grades;
 
 
-    Student(long id, String name, int[] grades){
+    Student(long id, String name){
 
         this.id = id;
-        this.name = name;
-        this.grades = grades;
+        this.name = name.trim();
+        this.grades = new ArrayList<>();
 
     }
 
@@ -36,11 +38,24 @@ public class Student {
         this.name = name;
     }
 
-    public int[] getGrades() {
-        return grades;
+    public ArrayList<Integer> getGrades() {
+        return this.grades;
     }
 
-    public void setGrades(int[] grades) {
-        this.grades = grades;
+//    public void setGrades(ArrayList<Integer> grades) {
+//        this.grades = grades;
+//    }
+
+    public void addGrade(int grade){
+        this.grades.add(grade);
+
+    }
+
+    public double getAverageGrade() {
+        double avrg = 0;
+        for(int grade: this.grades){
+            avrg += grade;
+        }
+        return avrg/this.grades.size();
     }
 }
