@@ -80,6 +80,7 @@ public class CohortTest {
      *
      * A Cohort instance can get the average and it's being calculated correctly.
      */
+
     @Test
     public void testReturnAverageStudents(){
         assertEquals(90, moon.getCohortAverage(), 0);
